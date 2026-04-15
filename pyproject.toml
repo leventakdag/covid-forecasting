@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "covid-forecasting"
+version = "0.1.0"
+description = "Object-oriented forecasting pipeline for a COVID-19 thesis project."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "scikit-learn",
+  "statsmodels",
+  "xgboost",
+  "matplotlib",
+  "seaborn",
+  "torch",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

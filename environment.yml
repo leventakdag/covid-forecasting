@@ -1,0 +1,22 @@
+name: covid-forecasting
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - jupyterlab
+  - ipykernel
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - xgboost
+  - matplotlib
+  - seaborn
+  - pytorch
+  - pytest
+  - pip:
+      - -e .

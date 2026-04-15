@@ -1,0 +1,44 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Environments
+.conda/
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.pytest_cache/
+pytest-cache-files-*/
+
+# Local data files
+data/*
+!data/README.md
+epidemiology.csv
+mobility.csv
+oxford-government-response.csv
+weather.csv
+RIVM_cases.csv
+RIVM_cases2.csv
+
+# Local artifacts
+outputs/
+artifacts/
+*.log
+*.tmp
+*.pkl
+*.joblib
+*.pt
+*.pth
