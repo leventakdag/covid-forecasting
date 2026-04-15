@@ -30,9 +30,6 @@ This repository contains the codebase for my thesis on 7-day-ahead forecasting o
 |       `-- analysis/
 |-- tests/
 |   `-- test_metrics.py
-|-- notebooks/
-|   |-- README.md
-|   `-- legacy/
 |-- data/
 |   `-- README.md
 `-- preds/
