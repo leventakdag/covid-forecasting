@@ -10,4 +10,3 @@ These files correspond to:
 - TCN multi-seed runs
 - TCN ablation runs
 
-The nested folder structure is preserved from the original thesis workflow so the existing notebooks can stay unchanged.

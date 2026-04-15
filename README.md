@@ -91,3 +91,8 @@ To rerun the project locally, place the following files inside the configured da
 - `weather.csv`
 - `RIVM_cases.csv`
 - `RIVM_cases2.csv`
+
+Sources of data: 
+
+- `https://health.google.com/covid-19/open-data/`
+- `https://data.rivm.nl/covid-19/`
