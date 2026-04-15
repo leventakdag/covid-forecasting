@@ -1,13 +1,16 @@
 # covid-forecasting
 
-This repository contains the codebase for my thesis on 7-day-ahead forecasting of COVID-19 cases in the Netherlands using European panel data. The project compares statistical, machine learning, and deep learning models in a walk-forward forecasting setup.
+This repository contains the codebase for my thesis on one-week-ahead forecasting of the 7-day rolling sum of newly confirmed COVID-19 cases in the Netherlands. The main research question is whether Dutch forecasts improve when models are trained on a multi-country panel from the WHO European Region and when external information is added beyond past case counts.
 
 ## Project Summary
 
-- Forecast target: Dutch COVID-19 case counts on a 7-day horizon
-- Data: European country-level panel data used for cross-country learning
-- Model families: ARIMA, Elastic Net, XGBoost, and a Temporal Convolutional Network (TCN)
-- Features: epidemiology, mobility, government response, weather, and RIVM case data
+- Forecast target: one-week-ahead forecasts of the 7-day rolling sum of newly confirmed Dutch COVID-19 cases
+- Main comparison 1: Dutch-only (`local`) training versus multi-country (`global`) training
+- Main comparison 2: autoregressive (`AR`) specifications versus feature-rich (`full`) specifications with mobility, weather, and government response data
+- Evaluation design: weekly walk-forward forecasting over a daily panel spanning 1 March 2020 to 24 April 2022
+- Geographic scope: countries in the WHO European Region, with final evaluation on the Netherlands
+- Model families used in the study: Elastic Net, XGBoost, and a Temporal Convolutional Network (TCN), with ARIMA retained as a baseline
+- Data sources: epidemiology, mobility, government response, weather, and RIVM case data
 
 ## Repository Structure
 
@@ -43,9 +46,9 @@ This repository contains the codebase for my thesis on 7-day-ahead forecasting o
 The project is split into reusable components:
 
 - `data/`: panel loading, filtering, RIVM integration, and imputation
-- `features/`: supervised lag features for classical models and 3D sequence generation for the TCN
-- `models/`: object-oriented experiment runners for Elastic Net, XGBoost, ARIMA, and TCN
-- `analysis/`: panel summary tables and result-table generation from saved prediction files
+- `features/`: autoregressive and exogenous feature construction for classical models, plus 3D sequence generation for the TCN
+- `models/`: object-oriented experiment runners for Dutch-only versus multi-country forecasting with Elastic Net, XGBoost, ARIMA, and TCN
+- `analysis/`: panel summary tables and result-table generation for local/global and AR/full comparisons
 - `scripts/`: thin entry points for running the main workflows
 
 ## Workflow Entry Points
