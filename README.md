@@ -43,8 +43,6 @@ This repository contains the codebase for my thesis on one-week-ahead forecastin
 
 ## Package Design
 
-The project is split into reusable components:
-
 - `data/`: panel loading, filtering, RIVM integration, and imputation
 - `features/`: autoregressive and exogenous feature construction for classical models, plus 3D sequence generation for the TCN
 - `models/`: object-oriented experiment runners for Dutch-only versus multi-country forecasting with Elastic Net, XGBoost, ARIMA, and TCN
