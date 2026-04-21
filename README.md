@@ -73,14 +73,12 @@ python scripts/run_analysis.py --data-dir data --output-dir preds/preds --report
 
 ## Environment Setup
 
-This project uses Conda.
 
 ```bash
 conda env create -f environment.yml
 conda activate covid-forecasting
 ```
 
-The environment installs the local package in editable mode, so the `src/` modules and `scripts/` entry points work immediately after setup.
 
 ## Data Notes
 
